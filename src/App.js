@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import obrazek from './assets/images/old one.jpg'
+import {AnimalItem} from './assets/components/AnimalItem'
 
 function App() {
+
+const myData = {
+  src: obrazek,
+  title: 'the old one',
+  description: 'good times'
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col xs={12} md={6}>
+          <img width={450} className="image-fluid" src={obrazek} alt="old one"></img>
+          
+          </Col>
+          <Col xs={12} md={6}>
+          <img width={450} className="image-fluid" src={obrazek} alt="old one"></img>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
